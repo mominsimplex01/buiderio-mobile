@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative bg-[#5B2D8E] overflow-hidden min-h-[420px] md:min-h-[500px] lg:min-h-[580px]">
+    <section className="relative bg-[#5B2D8E] overflow-hidden min-h-[200px] sm:min-h-[300px] md:min-h-[500px] lg:min-h-[580px]">
       {/* Yellow background blob (right side) */}
       <div className="absolute inset-y-0 right-0 w-3/4 z-0">
         <svg
@@ -53,14 +53,14 @@ export default function Hero() {
       </div>
 
       {/* Text content - right side */}
-      <div className="relative z-20 flex flex-col items-center justify-center text-center ml-auto w-1/2 md:w-[45%] lg:w-[40%] min-h-[420px] md:min-h-[500px] lg:min-h-[580px] px-6 md:px-8 py-12">
-        <h1 className="font-bebas text-white text-3xl md:text-5xl lg:text-6xl leading-tight tracking-tight uppercase">
+      <div className="relative z-20 flex flex-col items-center justify-center text-center ml-auto w-1/2 md:w-[45%] lg:w-[40%] min-h-[200px] sm:min-h-[300px] md:min-h-[500px] lg:min-h-[580px] px-3 sm:px-4 md:px-8 py-6 md:py-12">
+        <h1 className="font-bebas text-white text-xl sm:text-3xl md:text-5xl lg:text-6xl leading-tight tracking-tight uppercase">
           It starts
           <br />
           with the
         </h1>
-        <div className="relative mt-2">
-          <span className="font-pacifico text-brand-dark text-4xl md:text-6xl lg:text-7xl tracking-tight lowercase">
+        <div className="relative mt-1 md:mt-2">
+          <span className="font-pacifico text-brand-dark text-2xl sm:text-4xl md:text-6xl lg:text-7xl tracking-tight lowercase">
             sauce
           </span>
           {/* Underline */}
@@ -69,7 +69,7 @@ export default function Hero() {
             alt=""
             width={254}
             height={24}
-            className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-full max-w-[200px] md:max-w-[260px] -rotate-6"
+            className="absolute -bottom-2 md:-bottom-3 left-1/2 -translate-x-1/2 w-full max-w-[120px] sm:max-w-[180px] md:max-w-[260px] -rotate-6"
             aria-hidden="true"
           />
         </div>
