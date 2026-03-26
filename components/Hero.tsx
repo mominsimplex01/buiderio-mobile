@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative bg-[#5B2D8E] overflow-hidden min-h-[200px] sm:min-h-[300px] md:min-h-[500px] lg:min-h-[580px]">
+    <section className="relative bg-[#5B2D8E] overflow-hidden min-h-[220px] sm:min-h-[260px] md:min-h-[500px] lg:min-h-[580px]">
       {/* Yellow background blob (right side) */}
       <div className="absolute inset-y-0 right-0 w-3/4 z-0">
         <svg
@@ -20,7 +20,7 @@ export default function Hero() {
 
       {/* Decorative yellow blobs top-right */}
       <div className="absolute right-0 top-0 z-10 opacity-80 pointer-events-none">
-        <svg viewBox="0 0 454 489" fill="none" className="w-40 md:w-64 lg:w-80 h-auto">
+        <svg viewBox="0 0 454 489" fill="none" className="w-24 sm:w-36 md:w-64 lg:w-80 h-auto">
           <path
             d="M8.8016 228.399C14.5199 222.771 35.648 227.071 37.9284 236.246C39.8624 244.027 36.8185 251.714 30.5179 256.694C19.4296 265.457 16.0012 266.775 5.95632 269.562C-4.72482 272.525 0.66454 236.408 8.8016 228.399Z"
             fill="#ECB100"
@@ -40,27 +40,38 @@ export default function Hero() {
         </svg>
       </div>
 
-      {/* Fries image - left side */}
-      <div className="absolute left-0 bottom-0 z-10 w-1/2 md:w-[55%] lg:w-[58%]">
+      {/* Mobile: full-width fries image with rounded right corners only */}
+      <div className="md:hidden absolute left-0 top-8 sm:top-10 right-[7%] bottom-0 z-10">
+        <Image
+          src="https://api.builder.io/api/v1/image/assets/TEMP/f42aa31f9a3090c8a7cfe2b90a3cb96ec5b8be9a?width=726"
+          alt="Johnny & Jugnu signature fries"
+          fill
+          className="object-cover rounded-[0_28px_28px_0]"
+          priority
+        />
+      </div>
+
+      {/* Desktop: fries image left side */}
+      <div className="hidden md:block absolute left-0 bottom-0 z-10 md:w-[55%] lg:w-[58%]">
         <Image
           src="https://api.builder.io/api/v1/image/assets/TEMP/541d9d6c6a2479c63eb87a50a706902ab79a11e1?width=1754"
           alt="Johnny & Jugnu signature fries"
           width={877}
           height={420}
-          className="w-full h-auto object-cover rounded-tr-[60px] md:rounded-tr-[80px]"
+          className="w-full h-auto object-cover rounded-tr-[80px]"
           priority
         />
       </div>
 
-      {/* Text content - right side */}
-      <div className="relative z-20 flex flex-col items-center justify-center text-center ml-auto w-1/2 md:w-[45%] lg:w-[40%] min-h-[200px] sm:min-h-[300px] md:min-h-[500px] lg:min-h-[580px] px-3 sm:px-4 md:px-8 py-6 md:py-12">
-        <h1 className="font-bebas text-white text-xl sm:text-3xl md:text-5xl lg:text-6xl leading-tight tracking-tight uppercase">
+      {/* Text content - desktop only */}
+      <div className="hidden md:flex relative z-20 flex-col items-center justify-center text-center ml-auto md:w-[45%] lg:w-[40%] md:min-h-[500px] lg:min-h-[580px] md:px-8 md:py-12">
+        <h1 className="font-bebas text-white md:text-5xl lg:text-6xl leading-tight tracking-tight uppercase">
           It starts
           <br />
           with the
         </h1>
-        <div className="relative mt-1 md:mt-2">
-          <span className="font-pacifico text-brand-dark text-2xl sm:text-4xl md:text-6xl lg:text-7xl tracking-tight lowercase">
+        <div className="relative mt-2">
+          <span className="font-pacifico text-brand-dark md:text-6xl lg:text-7xl tracking-tight lowercase">
             sauce
           </span>
           {/* Underline */}
@@ -69,7 +80,7 @@ export default function Hero() {
             alt=""
             width={254}
             height={24}
-            className="absolute -bottom-2 md:-bottom-3 left-1/2 -translate-x-1/2 w-full max-w-[120px] sm:max-w-[180px] md:max-w-[260px] -rotate-6"
+            className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-full max-w-[260px] -rotate-6"
             aria-hidden="true"
           />
         </div>
