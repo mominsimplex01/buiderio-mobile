@@ -4,6 +4,7 @@ import MenuSection from "@/components/MenuSection";
 import BrandStory from "@/components/BrandStory";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
+import MobileBottomNav from "@/components/MobileBottomNav";
 
 const popularItems = [
   {
@@ -69,7 +70,7 @@ const mainItems = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white pb-20 md:pb-0">
       <Navbar />
       <main>
         <Hero />
@@ -91,6 +92,7 @@ export default function Home() {
         <Testimonials />
       </main>
       <Footer />
+      <MobileBottomNav />
     </div>
   );
 }
